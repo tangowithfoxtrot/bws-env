@@ -56,8 +56,8 @@ partials_extension: sh
 # You can run `bashly add colors` to add a standard colors library.
 # This option cannot be set via environment variables.
 usage_colors:
-  caption: ~
-  command: ~
-  arg: ~
-  flag: ~
-  environment_variable: ~
+  caption: bold
+  command: green
+  arg: blue
+  flag: magenta
+  environment_variable: cyan
