@@ -25,4 +25,4 @@ flags:
   help: Project ID to use for secrets
 
 examples:
-- ${0##*/} --interactive 'echo \$BWS_ACCESS_TOKEN'
+- ${0##*/} --interactive 'echo \$SOME_VAR_FROM_BITWARDEN'

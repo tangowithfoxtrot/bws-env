@@ -116,7 +116,7 @@ bws_env.sh_usage() {
 
     # :command.usage_examples
     printf "%s\n" "$(bold "Examples:")"
-    printf "  ${0##*/} --interactive 'echo \$BWS_ACCESS_TOKEN'\n"
+    printf "  ${0##*/} --interactive 'echo \$SOME_VAR_FROM_BITWARDEN'\n"
     echo
 
   fi
@@ -305,7 +305,7 @@ parse_requirements() {
 
 # :command.initialize
 initialize() {
-  version="0.0.1"
+  version="0.1.0"
   long_usage=''
   set -e
 
