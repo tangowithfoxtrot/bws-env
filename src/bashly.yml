@@ -7,8 +7,8 @@ environment_variables:
   help: The access token used for Bitwarden Secrets Manager
 
 dependencies:
-  bws:
-  jq:
+  bws: https://github.com/bitwarden/sdk/releases/latest
+  jq: https://command-not-found.com/jq
 
 catch_all: 
   help: The command to run with secrets injected

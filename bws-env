@@ -29,7 +29,6 @@ root_command() {
     bws "${@}" ${args[--project]:-}
   }
 
-  # if "${BWS_ACCESS_TOKEN:-}" or "${args[--interactive]:-}" is not empty
   if [[ -z "${BWS_ACCESS_TOKEN:-}" || -n "${args[--interactive]:-}" ]]; then
     read -r -s -p "Paste your access token: " BWS_ACCESS_TOKEN
     echo
@@ -238,6 +237,7 @@ parse_requirements() {
     deps['bws']="$(command -v bws | head -n1)"
   else
     printf "missing dependency: bws\n" >&2
+    printf "%s\n" "https://github.com/bitwarden/sdk/releases/latest" >&2
     exit 1
   fi
 
@@ -245,6 +245,7 @@ parse_requirements() {
     deps['jq']="$(command -v jq | head -n1)"
   else
     printf "missing dependency: jq\n" >&2
+    printf "%s\n" "https://command-not-found.com/jq" >&2
     exit 1
   fi
 
