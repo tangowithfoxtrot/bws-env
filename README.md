@@ -8,6 +8,8 @@ A wrapper script for [bws](https://github.com/bitwarden/sdk), the Bitwarden Secr
 ./bws-env.sh 'echo $SOME_VAR_FROM_BITWARDEN'
 ```
 
+Note that we are using single-quotes to prevent the shell from expanding `$SOME_VAR_FROM_BITWARDEN` before `bws-env.sh` is called.
+
 ### Inject secrets into a container
 `docker-compose.yml`:
 ```yaml
