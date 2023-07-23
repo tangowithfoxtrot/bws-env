@@ -116,7 +116,9 @@ bws_env.sh_usage() {
 
     # :command.usage_examples
     printf "%s\n" "$(bold "Examples:")"
-    printf "  ${0##*/} --interactive 'echo \$SOME_VAR_FROM_BITWARDEN'\n"
+    printf "  ${0##*/} 'echo \$SOME_VAR_FROM_BITWARDEN'\n"
+    printf "  ${0##*/} 'docker-compose up -d'\n"
+    printf "  ${0##*/} 'npm run start'\n"
     echo
 
   fi

@@ -25,4 +25,6 @@ flags:
   help: Project ID to use for secrets
 
 examples:
-- ${0##*/} --interactive 'echo \$SOME_VAR_FROM_BITWARDEN'
+- ${0##*/} 'echo \$SOME_VAR_FROM_BITWARDEN'
+- ${0##*/} 'docker-compose up -d'
+- ${0##*/} 'npm run start'
