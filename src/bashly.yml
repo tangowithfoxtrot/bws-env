@@ -1,0 +1,28 @@
+name: bws-env
+help: Inject secrets from Bitwarden into a command.
+version: 0.0.1
+
+environment_variables:
+- name: BWS_ACCESS_TOKEN
+  help: The access token used for Bitwarden Secrets Manager
+
+dependencies:
+  bws:
+  jq:
+
+catch_all: 
+  help: The command to run with secrets injected
+  label: COMMAND
+
+flags:
+- long: --interactive
+  short: -i
+  help: Interactively supply a BWS_ACCESS_TOKEN
+
+- long: --project
+  short: -p
+  arg: project
+  help: Project ID to use for secrets
+
+examples:
+- ${0##*/} run --interactive 'echo \$BWS_ACCESS_TOKEN'
