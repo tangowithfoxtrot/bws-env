@@ -23,4 +23,7 @@ services:
 ```
 
 ## Thanks
-This script was made with [Bashly](https://github.com/DannyBen/bashly). 
+This script was made with [Bashly](https://github.com/DannyBen/bashly).
+
+## Disclaimer
+This script is not affiliated with Bitwarden or 8bit Solutions LLC. It is not an official Bitwarden product. Use at your own risk.
