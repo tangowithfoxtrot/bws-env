@@ -59,21 +59,21 @@ version_command() {
 }
 
 # :command.usage
-bws_env_usage() {
+bws_env.sh_usage() {
   if [[ -n $long_usage ]]; then
-    printf "bws-env - Inject secrets from Bitwarden into a command.\n"
+    printf "bws-env.sh - Inject secrets from Bitwarden into a command.\n"
     echo
 
   else
-    printf "bws-env - Inject secrets from Bitwarden into a command.\n"
+    printf "bws-env.sh - Inject secrets from Bitwarden into a command.\n"
     echo
 
   fi
 
   printf "%s\n" "$(bold "Usage:")"
-  printf "  bws-env [OPTIONS] [COMMAND...]\n"
-  printf "  bws-env --help | -h\n"
-  printf "  bws-env --version | -v\n"
+  printf "  bws-env.sh [OPTIONS] [COMMAND...]\n"
+  printf "  bws-env.sh --help | -h\n"
+  printf "  bws-env.sh --version | -v\n"
   echo
 
   # :command.long_usage
@@ -221,7 +221,7 @@ parse_requirements() {
 
       --help | -h)
         long_usage=yes
-        bws_env_usage
+        bws_env.sh_usage
         exit
         ;;
 

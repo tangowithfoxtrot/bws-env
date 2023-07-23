@@ -1,6 +1,6 @@
-name: bws-env
+name: bws-env.sh
 help: Inject secrets from Bitwarden into a command.
-version: 0.0.1
+version: 0.1.0
 
 environment_variables:
 - name: BWS_ACCESS_TOKEN
