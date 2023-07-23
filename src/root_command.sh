@@ -15,8 +15,7 @@ bws_command() {
   bws "${@}" ${args[--project]:-}
 }
 
-if [[ -z "${BWS_ACCESS_TOKEN:-}" ]]; then
-  echo "BWS_ACCESS_TOKEN is not set."
+if [[ -z "${BWS_ACCESS_TOKEN:-}" || -n "${args[--interactive]:-}" ]]; then
   read -r -s -p "Paste your access token: " BWS_ACCESS_TOKEN
   echo
   export BWS_ACCESS_TOKEN
