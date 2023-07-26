@@ -15,14 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set settings.env to production
-        run: |
-          sed -i 's/^env: development/env: production/g' settings.yml
-
       - name: Bashly generate
         run: |
           docker run --user $(id -u):$(id -g) \
-            --volume "$PWD:/app" dannyben/bashly generate
+            --volume "$PWD:/app" dannyben/bashly generate --env production
 
       - name: Upload artifact
         uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
