@@ -1,4 +1,8 @@
 <!-- A GitHub description of this script -->
+
+> [!IMPORTANT]  
+> A better version of this functionality is now included in the bws CLI. See: https://bitwarden.com/help/secrets-manager-cli/#run
+
 # bws-env
 A wrapper script for [bws](https://github.com/bitwarden/sdk), the Bitwarden Secrets Manager command-line utility, that injects secrets into a command.
 
